@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15151a"/><stop offset="1" stop-color="#2a1430"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1060" cy="120" r="70" fill="#ff3d6e"/>
+  <text x="90" y="250" font-family="Outfit,Arial,sans-serif" font-weight="800" font-size="78" fill="#fff">アニメ先生ユウキ</text>
+  <text x="92" y="330" font-family="'Noto Sans JP',Arial,sans-serif" font-weight="700" font-size="36" fill="#ffd4e0">AnimeSensei</text>
+  <text x="92" y="430" font-family="'Noto Sans JP',Arial,sans-serif" font-weight="500" font-size="34" fill="#e7e7ee">秋葉原ツアーガイド × 日本語講師 × ポッドキャスター</text>
+  <text x="92" y="500" font-family="'Noto Sans JP',Arial,sans-serif" font-weight="500" font-size="28" fill="#a9a9b8">7番組・500話＋／italki 2,091レッスン／訪日ゲスト500人＋</text>
+</svg>

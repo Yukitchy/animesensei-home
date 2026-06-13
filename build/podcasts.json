@@ -1,0 +1,12 @@
+{
+  "_comment": "PODCASTカードの元データ。これを編集して refresh_podcasts.py を実行すると index.html のカードが再生成されます。rss を入れるとその番組だけ最新エピソード名を自動追記します。",
+  "shows": [
+    {"name": "ゼロからの体験ツアーガイドラジオ", "desc": "「ゼロからでも始められる」体験ツアーの始め方を発信。全128話。", "cover": "assets/img/podcast/taiken.jpg", "url": "https://podcasters.spotify.com/pod/show/taikenradio", "rss": ""},
+    {"name": "ゼロからの民泊ガイドラジオ｜みんらじ", "desc": "民泊の法律・物件・集客を基礎から解説。全139話。", "cover": "assets/img/podcast/minpaku.jpg", "url": "https://minpaku.yuukipodcast.com", "rss": ""},
+    {"name": "アキバなう", "desc": "ミスター秋葉原ササキチ×ユウキがアキバのイマを発信。", "cover": "assets/img/podcast/akibanow.jpg", "url": "https://podcasters.spotify.com/pod/show/akibanow", "rss": ""},
+    {"name": "イレギュラーコーヒー", "desc": "珈琲好きのための番組。全101話。", "cover": "assets/img/podcast/irregular.jpg", "url": "https://www.instagram.com/irregularcoffee", "rss": ""},
+    {"name": "メンタルよわよわラジオ", "desc": "うつ・休職・復職を経験したITエンジニアの体験談。", "cover": "assets/img/podcast/mental.jpg", "url": "https://podcasters.spotify.com/pod/show/0iepkmbr02o", "rss": ""},
+    {"name": "偏愛Channel", "desc": "あなたの「偏愛」をコンテンツにする推し活応援番組。", "cover": "assets/img/podcast/henai.jpg", "url": "https://podcasters.spotify.com/pod/show/vibechannel", "rss": ""},
+    {"name": "厚木トーク｜厚木のしゃべり場", "desc": "厚木生まれ5児の父ヤギ×ユウキのゆるトーク。全104話。", "cover": "assets/img/podcast/atsugi.jpg", "url": "https://podcasters.spotify.com/pod/show/atsugitalk", "rss": ""}
+  ]
+}
