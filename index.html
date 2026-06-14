@@ -8,7 +8,6 @@
 <link rel="canonical" href="https://animesensei.jp/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
-<!-- Open Graph / Twitter -->
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="アニメ先生ユウキ">
 <meta property="og:title" content="アニメ先生ユウキ｜秋葉原ツアーガイド × 日本語講師 × ポッドキャスター">
@@ -28,20 +27,13 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- Google Analytics 4 — 自前ホスティングなら無料で設置可。下の G-XXXXXXXXXX を実IDに置換するだけ -->
-<!-- 設定手順: README.md の「GA4」参照。IDを入れるまではコメントのまま無害です。
+<!-- Google Analytics 4 — 自前ホスティングなら無料。G-XXXXXXXXXX を実IDに置換し、下のコメントを外すだけ。
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 -->
 
-<!-- 構造化データ: Person + WebSite（AI検索・Google向け） -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,235 +58,255 @@
         "https://www.instagram.com/irregularcoffee"
       ]
     },
-    {
-      "@type": "WebSite",
-      "@id": "https://animesensei.jp/#website",
-      "url": "https://animesensei.jp/",
-      "name": "アニメ先生ユウキ",
-      "inLanguage": "ja",
-      "about": {"@id": "https://animesensei.jp/#person"}
-    }
+    {"@type": "WebSite", "@id": "https://animesensei.jp/#website", "url": "https://animesensei.jp/", "name": "アニメ先生ユウキ", "inLanguage": "ja", "about": {"@id": "https://animesensei.jp/#person"}}
   ]
 }
 </script>
 
 <style>
   :root{
-    --ink:#15151a; --ink-soft:#54545e; --line:#ececf0;
-    --bg:#ffffff; --bg-soft:#f7f7fa; --card:#ffffff;
-    --accent:#ff3d6e; --accent-ink:#d31350; --accent-soft:#fff0f4;
-    --blue:#2f6df6; --maxw:1080px; --radius:16px;
-    --shadow:0 1px 3px rgba(20,20,30,.06),0 8px 28px rgba(20,20,30,.06);
+    --blue:#008dcb; --blue-d:#0077ae; --purple:#5001b9; --purple-d:#3f0193;
+    --ink:#222222; --muted:#8a8e97; --line:#edf0f4; --bg:#ffffff; --bg-soft:#f7f7f7;
+    --yellow:#fff649; --maxw:1080px; --radius:10px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;
-    color:var(--ink);background:var(--bg);line-height:1.75;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  }
+  body{font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  .display{font-family:"Outfit",sans-serif}
+  .en-head{font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.06em}
 
   /* nav */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
-  .brand{font-weight:900;font-size:18px;letter-spacing:.02em;display:flex;align-items:center;gap:8px}
-  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);display:inline-block}
-  .nav-links{display:flex;gap:22px;font-size:14px;font-weight:500}
-  .nav-links a{color:var(--ink-soft)}
-  .nav-links a:hover{color:var(--ink)}
-  .nav-lang{font-size:13px;font-weight:700;border:1px solid var(--line);padding:5px 11px;border-radius:999px}
-  @media(max-width:680px){.nav-links{display:none}}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:900;font-size:18px;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--blue)}
+  .nav-links{display:flex;gap:24px;font-size:14px;font-weight:500}
+  .nav-links a{color:var(--ink)}
+  .nav-links a:hover{color:var(--blue)}
+  .nav-lang{font-size:13px;font-weight:700;border:1.5px solid var(--ink);padding:5px 12px;border-radius:4px}
+  @media(max-width:760px){.nav-links{display:none}}
 
   /* hero */
-  .hero{padding:74px 0 56px;background:
-     radial-gradient(60% 50% at 85% 0%,var(--accent-soft) 0%,transparent 60%),
-     radial-gradient(50% 40% at 0% 20%,#eef3ff 0%,transparent 55%);}
-  .eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);
-    border:1px solid #ffd4e0;padding:6px 13px;border-radius:999px;margin-bottom:20px}
-  h1.title{font-size:clamp(30px,6vw,54px);line-height:1.18;font-weight:900;letter-spacing:.01em}
-  h1.title .hl{background:linear-gradient(transparent 62%,#ffdf6b 62%)}
-  .lead{font-size:clamp(15px,2.2vw,19px);color:var(--ink-soft);margin-top:18px;max-width:620px}
-  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;border:1.5px solid var(--ink);transition:.15s}
-  .btn-primary{background:var(--ink);color:#fff}
-  .btn-primary:hover{background:var(--accent);border-color:var(--accent)}
-  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .hero{position:relative;min-height:560px;display:flex;align-items:center;color:#fff;
+    background:linear-gradient(90deg,rgba(10,14,30,.78) 0%,rgba(10,14,30,.45) 55%,rgba(10,14,30,.25) 100%), #0a0e1e center/cover no-repeat;
+    background-image:linear-gradient(90deg,rgba(10,14,30,.82) 0%,rgba(10,14,30,.5) 55%,rgba(10,14,30,.28) 100%),url("assets/img/photos/hero.jpg")}
+  .hero-in{padding:76px 0}
+  .hero .role{font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.16em;font-size:14px;color:#9fdcff;margin-bottom:14px}
+  .hero h1{font-size:clamp(34px,6.4vw,60px);font-weight:900;line-height:1.12;letter-spacing:.01em}
+  .hero .sub{margin-top:16px;font-size:clamp(15px,2.2vw,18px);font-weight:500;max-width:540px;color:#eef2f7}
+  .hero .roles{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .hero .roles span{font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,.45);padding:4px 12px;border-radius:999px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px;transition:.15s;border:2px solid transparent;cursor:pointer}
+  .btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+  .btn-purple{background:var(--purple);color:#fff}.btn-purple:hover{background:var(--purple-d)}
+  .btn-line{background:transparent;color:var(--ink);border-color:var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
 
-  /* stats */
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;text-align:center;box-shadow:var(--shadow)}
-  .stat .n{font-family:"Outfit",sans-serif;font-size:clamp(22px,3.4vw,32px);font-weight:800;letter-spacing:-.02em}
-  .stat .n .u{font-size:.5em;font-weight:700;color:var(--ink-soft);margin-left:2px}
-  .stat .l{font-size:12px;color:var(--ink-soft);margin-top:3px;font-weight:500}
-  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+  /* stats strip */
+  .stats{background:var(--ink);color:#fff}
+  .stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+  .stats .s{padding:20px 8px;border-left:1px solid rgba(255,255,255,.1)}
+  .stats .s:first-child{border-left:0}
+  .stats .n{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(22px,3.4vw,30px)}
+  .stats .n small{font-size:.5em;color:#9fdcff;margin-left:2px}
+  .stats .l{font-size:11.5px;color:#b9bdc6;margin-top:2px}
+  @media(max-width:680px){.stats-in{grid-template-columns:repeat(2,1fr)} .stats .s:nth-child(odd){border-left:0} .stats .s:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
 
   /* section */
-  section.block{padding:64px 0}
+  section.block{padding:72px 0}
   .block.soft{background:var(--bg-soft)}
-  .sec-head{margin-bottom:30px}
-  .sec-kicker{font-size:13px;font-weight:700;color:var(--accent-ink);letter-spacing:.08em}
-  h2.sec-title{font-size:clamp(24px,4vw,34px);font-weight:900;margin-top:6px;letter-spacing:.01em}
-  .sec-sub{color:var(--ink-soft);margin-top:8px;font-size:15px}
+  .sec-head{text-align:center;margin-bottom:42px}
+  .sec-en{font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.12em;font-size:clamp(28px,5vw,40px);color:var(--ink)}
+  .sec-en .ac{color:var(--blue)}
+  .sec-jp{font-size:14px;color:var(--muted);font-weight:700;margin-top:4px}
+  .sec-sub{color:var(--muted);margin-top:12px;font-size:15px}
 
-  /* now cards */
-  .now-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .now{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:.18s}
-  .now:hover{transform:translateY(-3px);border-color:#ddd}
-  .now .ic{font-size:30px}
-  .now h3{font-size:18px;font-weight:800;margin:12px 0 6px}
-  .now p{font-size:14px;color:var(--ink-soft)}
-  .now .more{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--accent-ink)}
-  @media(max-width:760px){.now-grid{grid-template-columns:1fr}}
+  /* video */
+  .video-box{max-width:760px;margin:0 auto;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;position:relative;background:#0a0e1e;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .video-box a{color:#fff;text-align:center}
+  .video-box .play{width:74px;height:74px;border-radius:50%;background:#ff0000;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+  .video-box .play::after{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:5px}
 
-  /* podcast grid */
+  /* services 2col */
+  .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(20,20,40,.05)}
+  .svc .ph{aspect-ratio:16/10;width:100%;object-fit:cover}
+  .svc .body{padding:22px 22px 0}
+  .svc .t-en{font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.08em;font-size:22px}
+  .svc .t-jp{font-size:13px;color:var(--muted);font-weight:700;margin:2px 0 10px}
+  .svc p{font-size:14px;color:#555;padding-bottom:18px}
+  .svc .cta{margin-top:auto;display:block;text-align:center;font-weight:700;font-size:15px;padding:16px;color:#fff;background:var(--ink);transition:.15s}
+  .svc .cta:hover{background:var(--blue)}
+  .svc.tour .cta:hover{background:var(--purple)}
+  @media(max-width:760px){.svc-grid{grid-template-columns:1fr}}
+
+  /* podcast */
   .pod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .pod{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column}
-  .pod:hover{transform:translateY(-3px)}
+  .pod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.18s}
+  .pod:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,20,40,.1)}
   .pod .cover{aspect-ratio:1/1;width:100%;object-fit:cover;background:#eee}
-  .pod .body{padding:15px 15px 17px;display:flex;flex-direction:column;flex:1}
+  .pod .pbody{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1}
   .pod .pname{font-size:15px;font-weight:800;line-height:1.4}
-  .pod .pdesc{font-size:12.5px;color:var(--ink-soft);margin-top:6px;flex:1}
-  .pod .plink{margin-top:11px;font-size:13px;font-weight:700;color:var(--accent-ink)}
+  .pod .pdesc{font-size:12.5px;color:var(--muted);margin-top:6px;flex:1}
+  .pod .plink{margin-top:11px;font-size:13px;font-weight:700;color:var(--blue)}
   @media(max-width:900px){.pod-grid{grid-template-columns:repeat(2,1fr)}}
 
   /* profile */
-  .prof{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start}
-  .prof .pcol h3{font-size:14px;font-weight:800;color:var(--accent-ink);margin:18px 0 8px;letter-spacing:.03em}
+  .prof{display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;max-width:880px;margin:0 auto}
+  .prof h3{font-size:14px;font-weight:900;color:var(--blue);margin:14px 0 9px;border-left:4px solid var(--blue);padding-left:10px}
   .prof .pcol h3:first-child{margin-top:0}
   .tags{display:flex;flex-wrap:wrap;gap:8px}
   .tag{font-size:13px;font-weight:600;background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:999px}
-  .tag.alt{background:var(--accent-soft);border-color:#ffd4e0;color:var(--accent-ink)}
-  @media(max-width:760px){.prof{grid-template-columns:1fr;gap:20px}}
+  .tag.b{background:#e9f6fc;border-color:#bce6f5;color:var(--blue-d)}
+  @media(max-width:760px){.prof{grid-template-columns:1fr}}
 
-  /* work with me */
-  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .work{border:1.5px solid var(--ink);border-radius:var(--radius);padding:24px;background:var(--card);display:flex;flex-direction:column}
-  .work h3{font-size:18px;font-weight:800}
-  .work p{font-size:14px;color:var(--ink-soft);margin:8px 0 18px;flex:1}
-  .work .btn{align-self:flex-start;font-size:14px;padding:11px 18px}
-  @media(max-width:760px){.work-grid{grid-template-columns:1fr}}
+  /* contact */
+  .contact{max-width:600px;margin:0 auto}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+  .field input,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:13px 14px;font-size:15px;font-family:inherit;background:#fff;transition:.15s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+  .field textarea{min-height:130px;resize:vertical}
+  .contact .btn-blue{width:100%;justify-content:center;border:0;font-size:16px}
+  .contact .alt{text-align:center;margin-top:14px;font-size:13px;color:var(--muted)}
+  .contact .alt a{color:var(--blue);font-weight:700}
 
   /* links */
-  .link-row{display:flex;flex-wrap:wrap;gap:12px}
-  .lchip{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;border:1px solid var(--line);background:#fff;padding:11px 18px;border-radius:999px;transition:.15s}
-  .lchip:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .link-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .lchip{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;border:1.5px solid var(--line);background:#fff;padding:11px 18px;border-radius:999px;transition:.15s}
+  .lchip:hover{border-color:var(--blue);color:var(--blue)}
 
-  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--ink-soft);font-size:13px}
+  footer{background:var(--ink);color:#cfd3da;padding:34px 0;font-size:13px}
   .foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
-  .vis-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  footer a{color:#fff}
 </style>
 </head>
-<body>
+<body id="top">
 
 <header class="nav">
   <div class="wrap nav-in">
     <a href="#top" class="brand"><span class="dot"></span>アニメ先生ユウキ</a>
     <nav class="nav-links">
-      <a href="#now">いま</a>
-      <a href="#podcast">ポッドキャスト</a>
-      <a href="#profile">プロフィール</a>
-      <a href="#work">依頼・予約</a>
-      <a href="#links">リンク</a>
+      <a href="#profile">PROFILE</a>
+      <a href="#services">LESSON / TOUR</a>
+      <a href="#podcast">PODCAST</a>
+      <a href="#contact">CONTACT</a>
     </nav>
     <a href="en/" class="nav-lang">EN</a>
   </div>
 </header>
 
-<main id="top">
-
+<main>
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">秋葉原 × アニメ × 多拠点生活</span>
-      <h1 class="title display">「好き」を仕事にする、<br><span class="hl">オタクのハブ</span>サイト。</h1>
-      <p class="lead">アニメ先生ユウキ（AnimeSensei）です。秋葉原アニメツアーのガイド、オタク向けの日本語レッスン、10番組以上のポッドキャスト。旅をしながら、好きなことを発信しています。</p>
-      <div class="cta-row">
-        <a href="#work" class="btn btn-primary">▶ 依頼・予約を見る</a>
-        <a href="#links" class="btn btn-ghost">各種リンク</a>
-        <a href="assets/files/yuuki.vcf" class="btn btn-ghost" download>📇 連絡先を保存</a>
+    <div class="wrap hero-in">
+      <div class="role">AKIHABARA × ANIME × NOMAD</div>
+      <h1>アニメ先生ユウキ</h1>
+      <p class="sub">秋葉原アニメツアーのガイド、オタク向けの日本語レッスン、10番組以上のポッドキャスト。旅と多拠点生活をしながら「好き」を仕事にしています。</p>
+      <div class="roles">
+        <span>ツアーガイド</span><span>日本語講師</span><span>ポッドキャスター</span><span>アドレスホッパー</span>
       </div>
-
-      <div class="stats">
-        <div class="stat"><div class="n">10<span class="u">番組+</span></div><div class="l">ポッドキャスト運営</div></div>
-        <div class="stat"><div class="n">500<span class="u">話+</span></div><div class="l">配信エピソード</div></div>
-        <div class="stat"><div class="n">2,091<span class="u">回+</span></div><div class="l">日本語レッスン実施</div></div>
-        <div class="stat"><div class="n">1,500<span class="u">人+</span></div><div class="l">訪日ゲストをガイド</div></div>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-blue">お問合せはコチラ</a>
+        <a href="#podcast" class="btn btn-purple">配信ラジオ番組一覧</a>
       </div>
     </div>
   </section>
 
-  <!-- NOW -->
-  <section class="block" id="now">
+  <!-- STATS -->
+  <div class="stats"><div class="wrap"><div class="stats-in">
+    <div class="s"><div class="n">10<small>番組+</small></div><div class="l">ポッドキャスト</div></div>
+    <div class="s"><div class="n">500<small>話+</small></div><div class="l">配信エピソード</div></div>
+    <div class="s"><div class="n">2,091<small>回+</small></div><div class="l">日本語レッスン実施</div></div>
+    <div class="s"><div class="n">1,500<small>人+</small></div><div class="l">訪日ゲストをガイド</div></div>
+  </div></div></div>
+
+  <!-- SELF INTRO VIDEO -->
+  <section class="block">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-kicker">WHAT I'M DOING NOW</div>
-        <h2 class="sec-title display">いま、やっていること</h2>
-        <p class="sec-sub">3つの「好き」を軸に活動中。それぞれ下にリンクがあります。</p>
+        <div class="sec-en">SELF <span class="ac">INTRO</span></div>
+        <div class="sec-jp">自己紹介動画</div>
       </div>
-      <div class="now-grid">
-        <div class="now">
-          <div class="ic">🎙️</div>
-          <h3>ポッドキャスト 10番組+</h3>
-          <p>旅・アキバ・珈琲・メンタル・地域まで。500話以上を配信中。雑談からニッチな専門話まで毎日更新。</p>
-          <a class="more" href="#podcast">番組を見る →</a>
+      <!-- TODO(ユウキ): 自己紹介動画のYouTube URLを href に入れてください（埋め込みにも変更可） -->
+      <div class="video-box">
+        <a href="#" data-todo="youtube-intro" aria-label="自己紹介動画を見る">
+          <span class="play"></span>
+          <div>自己紹介動画を見る</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="block soft" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-en">LESSON &amp; <span class="ac">TOUR</span></div>
+        <div class="sec-jp">レッスン・ツアー</div>
+      </div>
+      <div class="svc-grid">
+        <div class="svc lesson">
+          <img class="ph" src="assets/img/photos/lesson.jpg" alt="オタク向け日本語レッスン" loading="lazy">
+          <div class="body">
+            <div class="t-en">JAPANESE LESSON</div>
+            <div class="t-jp">オタク向け日本語レッスン</div>
+            <p>アニメ・マンガで「好き」から学ぶ日本語レッスン。文法や会話だけでなく、興味を引く内容がウリ。初心者〜上級・どんな年齢の方も大歓迎！自社サイト・各オンラインで累計2,091回以上の実績。</p>
+          </div>
+          <a class="cta" href="https://animesenseijp.com/" target="_blank" rel="noopener">レッスンを予約する →</a>
         </div>
-        <div class="now">
-          <div class="ic">🗼</div>
-          <h3>秋葉原アニメツアー</h3>
-          <p>訪日外国人と巡るディープな秋葉原。これまで1,500人以上をガイド。Airbnb / Viator で予約受付中。</p>
-          <a class="more" href="#work">ツアーを予約 →</a>
-        </div>
-        <div class="now">
-          <div class="ic">🇯🇵</div>
-          <h3>オタク向け日本語レッスン</h3>
-          <p>アニメ・マンガ1,500作品以上の知識で「好き」から学ぶ日本語。自社サイト・各オンラインプラットフォームで累計2,091回以上のレッスン実績。</p>
-          <a class="more" href="#work">レッスンを見る →</a>
+        <div class="svc tour">
+          <img class="ph" src="assets/img/photos/tour.jpg" alt="秋葉原アニメツアー" loading="lazy">
+          <div class="body">
+            <div class="t-en">AKIBA TOUR</div>
+            <div class="t-jp">秋葉原アニメツアー</div>
+            <p>東京・秋葉原で訪日外国人を1,500人以上ガイドしたオタクによるツアー。今まで知らなかったアキバのディープな魅力を、英語対応でご案内します。</p>
+          </div>
+          <a class="cta" href="https://www.airbnb.jp/" target="_blank" rel="noopener">ツアーを予約する →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PODCAST -->
-  <section class="block soft" id="podcast">
+  <section class="block" id="podcast">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-kicker">PODCAST</div>
-        <h2 class="sec-title display">配信中のポッドキャスト</h2>
+        <div class="sec-en">PODCAST</div>
+        <div class="sec-jp">配信中のポッドキャスト</div>
         <p class="sec-sub">10番組以上・500話以上を配信中。旅・アキバ・珈琲・メンタル・地域まで幅広く展開中！（一部を掲載）</p>
       </div>
       <!-- PODCAST_CARDS_START (build/refresh_podcasts.py がこの区間を再生成) -->
       <div class="pod-grid">
         <a class="pod" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/taiken.jpg" alt="ゼロからの体験ツアーガイドラジオ" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">ゼロからの体験ツアーガイドラジオ</div><div class="pdesc">「ゼロからでも始められる」体験ツアーの始め方を発信。全128話。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">ゼロからの体験ツアーガイドラジオ</div><div class="pdesc">「ゼロからでも始められる」体験ツアーの始め方を発信。全128話。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://minpaku.yuukipodcast.com" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/minpaku.jpg" alt="ゼロからの民泊ガイドラジオ｜みんらじ" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">ゼロからの民泊ガイドラジオ｜みんらじ</div><div class="pdesc">民泊の法律・物件・集客を基礎から解説。全139話。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">ゼロからの民泊ガイドラジオ｜みんらじ</div><div class="pdesc">民泊の法律・物件・集客を基礎から解説。全139話。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://podcasters.spotify.com/pod/show/akibanow" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/akibanow.jpg" alt="アキバなう" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">アキバなう</div><div class="pdesc">ミスター秋葉原ササキチ×ユウキがアキバのイマを発信。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">アキバなう</div><div class="pdesc">ミスター秋葉原ササキチ×ユウキがアキバのイマを発信。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/irregular.jpg" alt="イレギュラーコーヒー" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">イレギュラーコーヒー</div><div class="pdesc">珈琲好きのための番組。全101話。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">イレギュラーコーヒー</div><div class="pdesc">珈琲好きのための番組。全101話。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://podcasters.spotify.com/pod/show/0iepkmbr02o" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/mental.jpg" alt="メンタルよわよわラジオ" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">メンタルよわよわラジオ</div><div class="pdesc">うつ・休職・復職を経験したITエンジニアの体験談。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">メンタルよわよわラジオ</div><div class="pdesc">うつ・休職・復職を経験したITエンジニアの体験談。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://podcasters.spotify.com/pod/show/vibechannel" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/henai.jpg" alt="偏愛Channel" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">偏愛Channel</div><div class="pdesc">あなたの「偏愛」をコンテンツにする推し活応援番組。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">偏愛Channel</div><div class="pdesc">あなたの「偏愛」をコンテンツにする推し活応援番組。</div><div class="plink">聴く →</div></div>
         </a>
         <a class="pod" href="https://podcasters.spotify.com/pod/show/atsugitalk" target="_blank" rel="noopener">
           <img class="cover" src="assets/img/podcast/atsugi.jpg" alt="厚木トーク｜厚木のしゃべり場" loading="lazy" width="600" height="600">
-          <div class="body"><div class="pname">厚木トーク｜厚木のしゃべり場</div><div class="pdesc">厚木生まれ5児の父ヤギ×ユウキのゆるトーク。全104話。</div><div class="plink">聴く →</div></div>
+          <div class="pbody"><div class="pname">厚木トーク｜厚木のしゃべり場</div><div class="pdesc">厚木生まれ5児の父ヤギ×ユウキのゆるトーク。全104話。</div><div class="plink">聴く →</div></div>
         </a>
       </div>
       <!-- PODCAST_CARDS_END -->
@@ -302,103 +314,75 @@
   </section>
 
   <!-- PROFILE -->
-  <section class="block" id="profile">
+  <section class="block soft" id="profile">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-kicker">PROFILE</div>
-        <h2 class="sec-title display">どんな人？</h2>
+        <div class="sec-en">PRO<span class="ac">FILE</span></div>
+        <div class="sec-jp">プロフィール</div>
         <p class="sec-sub">埼玉・坂戸市出身。住まいを固定しない多拠点生活（アドレスホッパー）をしながら活動しています。</p>
       </div>
       <div class="prof">
         <div class="pcol">
           <h3>肩書き</h3>
           <div class="tags">
-            <span class="tag alt">秋葉原アニメツアーガイド</span>
-            <span class="tag alt">日本語講師</span>
-            <span class="tag alt">ポッドキャスター</span>
-            <span class="tag alt">インバウンドマーケター</span>
-            <span class="tag alt">アドレスホッパー</span>
+            <span class="tag b">秋葉原ツアーガイド</span><span class="tag b">日本語講師</span>
+            <span class="tag b">ポッドキャスター</span><span class="tag b">インバウンドマーケター</span><span class="tag b">アドレスホッパー</span>
           </div>
           <h3>得意なこと</h3>
-          <div class="tags">
-            <span class="tag">話すこと</span><span class="tag">イベント運営</span>
-            <span class="tag">ファシリテーション</span><span class="tag">教育</span><span class="tag">英会話</span>
-          </div>
+          <div class="tags"><span class="tag">話すこと</span><span class="tag">イベント運営</span><span class="tag">ファシリテーション</span><span class="tag">教育</span><span class="tag">英会話</span></div>
           <h3>ちょっと苦手（正直に）</h3>
-          <div class="tags">
-            <span class="tag">注意力散漫</span><span class="tag">忘れ物ぐせ</span>
-            <span class="tag">飽きっぽい</span><span class="tag">#ADHD</span><span class="tag">#HSP</span><span class="tag">#HSS型HSP</span>
-          </div>
+          <div class="tags"><span class="tag">注意力散漫</span><span class="tag">忘れ物ぐせ</span><span class="tag">飽きっぽい</span><span class="tag">#ADHD</span><span class="tag">#HSP</span><span class="tag">#HSS型HSP</span></div>
         </div>
         <div class="pcol">
           <h3>趣味・興味</h3>
-          <div class="tags">
-            <span class="tag">雑談</span><span class="tag">ラジオ</span><span class="tag">アニメ</span><span class="tag">漫画</span>
-            <span class="tag">温泉</span><span class="tag">サウナ</span><span class="tag">カフェ</span>
-            <span class="tag">教育</span><span class="tag">地方創生</span><span class="tag">移住</span><span class="tag">多拠点生活</span>
-          </div>
-          <h3>活動エリア</h3>
-          <div class="tags"><span class="tag">秋葉原</span><span class="tag">埼玉・坂戸</span><span class="tag">全国（多拠点）</span></div>
+          <div class="tags"><span class="tag">雑談</span><span class="tag">ラジオ</span><span class="tag">アニメ</span><span class="tag">漫画</span><span class="tag">温泉</span><span class="tag">サウナ</span><span class="tag">カフェ</span><span class="tag">教育</span><span class="tag">地方創生</span><span class="tag">移住</span><span class="tag">多拠点生活</span></div>
+          <h3>出身・活動エリア</h3>
+          <div class="tags"><span class="tag">埼玉・坂戸市</span><span class="tag">秋葉原</span><span class="tag">全国（多拠点）</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WORK WITH ME -->
-  <section class="block soft" id="work">
+  <!-- CONTACT -->
+  <section class="block" id="contact">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-kicker">WORK WITH ME</div>
-        <h2 class="sec-title display">依頼・予約</h2>
-        <p class="sec-sub">レッスン・ツアー・お仕事の依頼はこちらから。料金は各予約ページでご確認いただけます。</p>
+        <div class="sec-en">CON<span class="ac">TACT</span></div>
+        <div class="sec-jp">お問い合わせ</div>
+        <p class="sec-sub">レッスン・ツアー・取材・登壇・コラボのご相談はこちらから。</p>
       </div>
-      <div class="work-grid">
-        <div class="work">
-          <h3>🇯🇵 日本語レッスン</h3>
-          <p>アニメ・マンガで学ぶオタク向け日本語。初心者〜上級・体験レッスンあり。講師評価で上位1%の実績。</p>
-          <a class="btn btn-primary" href="https://animesenseijp.com/" target="_blank" rel="noopener">レッスンを予約</a>
-        </div>
-        <div class="work">
-          <h3>🗼 秋葉原ツアー</h3>
-          <p>訪日ゲスト向けのディープな秋葉原ツアー。英語ガイド対応。Airbnb 体験から予約できます。</p>
-          <a class="btn btn-primary" href="https://www.airbnb.jp/" target="_blank" rel="noopener">ツアーを予約</a>
-        </div>
-        <div class="work">
-          <h3>🤝 取材・登壇・コラボ</h3>
-          <p>インバウンド・多拠点生活・ポッドキャスト運営などの講演／取材／コラボのご相談。</p>
-          <a class="btn btn-primary" href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで相談</a>
-        </div>
-      </div>
+      <!-- TODO(ユウキ): action を Formspree等のエンドポイントに置換すると送信が動きます（README参照）。未設定でもメール導線は機能します -->
+      <form class="contact" action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <div class="field"><label for="n">お名前</label><input id="n" name="name" type="text" placeholder="山田 太郎" required></div>
+        <div class="field"><label for="e">メールアドレス</label><input id="e" name="email" type="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="m">メッセージ</label><textarea id="m" name="message" placeholder="ご相談内容をお書きください" required></textarea></div>
+        <button class="btn btn-blue" type="submit">送信する</button>
+        <div class="alt">うまく送れない場合は <a href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで直接</a> どうぞ</div>
+      </form>
     </div>
   </section>
 
   <!-- LINKS -->
-  <section class="block" id="links">
+  <section class="block soft" id="links">
     <div class="wrap">
-      <div class="sec-head">
-        <div class="sec-kicker">LINKS</div>
-        <h2 class="sec-title display">各種リンク</h2>
-        <p class="sec-sub">SNS・配信・サービス。フォローはお気軽に。</p>
-      </div>
+      <div class="sec-head"><div class="sec-en">LINKS</div><div class="sec-jp">各種リンク</div></div>
       <div class="link-row">
         <a class="lchip" href="https://animesenseijp.com/" target="_blank" rel="noopener">🌐 日本語レッスン公式</a>
-        <a class="lchip" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener">🎧 Spotify（番組一覧）</a>
+        <a class="lchip" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener">🎧 Spotify（番組）</a>
         <a class="lchip" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener">📷 Instagram</a>
-        <a class="lchip" href="mailto:icchan417@gmail.com">✉️ Email</a>
-        <!-- TODO(ユウキ): 個人の X / YouTube / note / lit.link のURLをここに追加してください -->
+        <a class="lchip" href="assets/files/yuuki.vcf" download>📇 連絡先を保存</a>
+        <!-- TODO(ユウキ): X / YouTube / note の実URLを追加 -->
         <a class="lchip" href="#" data-todo="X">𝕏 X（要URL）</a>
         <a class="lchip" href="#" data-todo="YouTube">▶️ YouTube（要URL）</a>
-        <a class="lchip" href="#" data-todo="note">📝 note（要URL）</a>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
   <div class="wrap foot-in">
     <div>© 2026 アニメ先生ユウキ / AnimeSensei</div>
-    <div><a href="en/">English</a> ・ <a href="assets/files/yuuki.vcf" download>連絡先(vCard)</a></div>
+    <div><a href="en/">English</a> ・ <a href="assets/files/yuuki.vcf" download>vCard</a></div>
   </div>
 </footer>
 

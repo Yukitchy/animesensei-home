@@ -45,13 +45,13 @@ def build_cards(shows):
         desc = s.get("desc", "")
         ep = latest_episode(s.get("rss", ""))
         if ep:
-            desc = f'{desc}<br><span style="color:var(--accent-ink);font-weight:700">最新: {esc(ep)}</span>'
+            desc = f'{desc}<br><span style="color:var(--blue);font-weight:700">最新: {esc(ep)}</span>'
         else:
             desc = esc(desc)
         out.append(
             f'        <a class="pod" href="{esc(s["url"])}" target="_blank" rel="noopener">\n'
             f'          <img class="cover" src="{esc(s["cover"])}" alt="{esc(s["name"])}" loading="lazy" width="600" height="600">\n'
-            f'          <div class="body"><div class="pname">{esc(s["name"])}</div>'
+            f'          <div class="pbody"><div class="pname">{esc(s["name"])}</div>'
             f'<div class="pdesc">{desc}</div><div class="plink">聴く →</div></div>\n'
             f'        </a>'
         )
