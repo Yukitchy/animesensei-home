@@ -88,11 +88,13 @@ python3 build/refresh_podcasts.py
 | `profile.jpg` | （任意・未使用枠） | 縦長 |
 ※ 現状はプレースホルダ画像。STUDIOで使っている写真をそのまま入れればOK。
 
-### お問い合わせフォームを動かす（任意）
-静的サイトなのでフォーム送信には外部サービスが必要（無料）。
-1. https://formspree.io/ で登録→フォーム作成→エンドポイント `https://formspree.io/f/xxxxxxxx` を取得
-2. `index.html` の `<form ... action="https://formspree.io/f/XXXXXXXX">` を実エンドポイントに置換
-※ 未設定でも「メールで直接」リンク（mailto）は機能します。
+### お問い合わせフォーム（Googleフォーム運用）
+静的サイトなので自前フォームは使わず、Googleフォームに飛ばす方式。
+- 公開フォーム: https://forms.gle/Ea7aasF5zmgrfWHv9 （お名前・メールアドレス・メッセージ）
+- 回答は連携スプレッドシートに自動集計（所有者のGoogleアカウント）
+- 再生成スクリプト: `build/create_contact_form.gs`（script.google.com に貼って `createContactForm` を実行）
+- サイト側は CONTACT セクションの「お問い合わせフォームを開く」ボタンがこのURLを指す。差し替えるときはそのリンクを変更。
+※ 「メールで直接」リンク（mailto）はフォールバックとして併記。
 
 ### 自己紹介動画
 `index.html` の `data-todo="youtube-intro"` の `<a href="#">` に動画URLを入れる（埋め込みに変更も可）。

@@ -289,7 +289,7 @@
             <div class="t-jp">秋葉原アニメツアー</div>
             <p>東京・秋葉原で訪日外国人を1,500人以上ガイドしたオタクによるツアー。今まで知らなかったアキバのディープな魅力を、英語対応でご案内します。</p>
           </div>
-          <a class="cta" href="https://www.airbnb.jp/" target="_blank" rel="noopener" aria-label="ツアーを予約する（新しいタブで開く）">ツアーを予約する →</a>
+          <a class="cta" href="https://airbnb-trips.pxf.io/MMayn" target="_blank" rel="noopener" aria-label="ツアーを予約する（新しいタブで開く）">ツアーを予約する →</a>
         </div>
       </div>
     </div>
@@ -376,14 +376,11 @@
         <div class="sec-jp">お問い合わせ</div>
         <p class="sec-sub">レッスン・ツアー・取材・登壇・コラボのご相談はこちらから。</p>
       </div>
-      <!-- TODO(ユウキ): action を Formspree等のエンドポイントに置換すると送信が動きます（README参照）。未設定でもメール導線は機能します -->
-      <form class="contact" action="https://formspree.io/f/XXXXXXXX" method="POST">
-        <div class="field"><label for="n">お名前</label><input id="n" name="name" type="text" placeholder="山田 太郎" required></div>
-        <div class="field"><label for="e">メールアドレス</label><input id="e" name="email" type="email" placeholder="you@example.com" required></div>
-        <div class="field"><label for="m">メッセージ</label><textarea id="m" name="message" placeholder="ご相談内容をお書きください" required></textarea></div>
-        <button class="btn btn-blue" type="submit">送信する</button>
-        <div class="alt">うまく送れない場合は <a href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで直接</a> どうぞ</div>
-      </form>
+      <!-- お問い合わせはGoogleフォームで受付（回答はスプレッドシートに自動集計）。フォームの編集は所有者のGoogleアカウントから。 -->
+      <div class="contact">
+        <a class="btn btn-blue" href="https://forms.gle/Ea7aasF5zmgrfWHv9" target="_blank" rel="noopener" aria-label="お問い合わせフォームを開く（Googleフォーム・新しいタブで開く）">お問い合わせフォームを開く →</a>
+        <div class="alt">フォームが開かない場合は <a href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで直接</a> どうぞ</div>
+      </div>
     </div>
   </section>
 
@@ -396,9 +393,8 @@
         <a class="lchip" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener" aria-label="Spotify 番組一覧（新しいタブで開く）">🎧 Spotify（番組）</a>
         <a class="lchip" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開く）">📷 Instagram</a>
         <a class="lchip" href="assets/files/yuuki.vcf" download>📇 連絡先を保存</a>
-        <!-- TODO(ユウキ): X / YouTube / note の実URLを追加 -->
-        <a class="lchip" href="#" data-todo="X">𝕏 X（要URL）</a>
-        <a class="lchip" href="#" data-todo="YouTube">▶️ YouTube（要URL）</a>
+        <a class="lchip" href="https://x.com/yukianimesensei" target="_blank" rel="noopener" aria-label="X（旧Twitter）（新しいタブで開く）">𝕏 X</a>
+        <a class="lchip" href="https://note.com/akibatour" target="_blank" rel="noopener" aria-label="note（新しいタブで開く）">📝 note</a>
       </div>
     </div>
   </section>
