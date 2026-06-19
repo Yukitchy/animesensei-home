@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yukitchy.github.io/animesensei-home/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://yukitchy.github.io/animesensei-home/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://yukitchy.github.io/animesensei-home/en/"/>
+    <loc>https://home.yuukipodcast.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://home.yuukipodcast.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://home.yuukipodcast.com/en/"/>
     <lastmod>2026-06-19</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yukitchy.github.io/animesensei-home/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://yukitchy.github.io/animesensei-home/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://yukitchy.github.io/animesensei-home/en/"/>
+    <loc>https://home.yuukipodcast.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://home.yuukipodcast.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://home.yuukipodcast.com/en/"/>
     <lastmod>2026-06-19</lastmod>
     <priority>0.8</priority>
   </url>

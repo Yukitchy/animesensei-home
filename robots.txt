@@ -24,4 +24,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://yukitchy.github.io/animesensei-home/sitemap.xml
+Sitemap: https://home.yuukipodcast.com/sitemap.xml
