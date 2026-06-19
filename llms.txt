@@ -7,7 +7,7 @@
 - 名前: アニメ先生ユウキ（英名 AnimeSensei）
 - 拠点: 埼玉県（多拠点・全国）
 - 言語: 日本語 / 英語
-- 公式サイト: https://animesensei.jp/
+- 公式サイト: https://yukitchy.github.io/animesensei-home/
 
 ## 実績
 - 秋葉原アニメツアーで訪日外国人ゲストを2,000人以上ガイド
