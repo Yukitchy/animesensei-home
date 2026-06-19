@@ -14,12 +14,17 @@
 <meta property="og:description" content="秋葉原アニメツアー・オタク向け日本語レッスン・10番組以上のポッドキャスト。旅と多拠点生活をしながら『好き』を仕事にするオタクのハブ。">
 <meta property="og:url" content="https://animesensei.jp/">
 <meta property="og:image" content="https://animesensei.jp/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="アニメ先生ユウキ">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="アニメ先生ユウキ｜秋葉原ツアーガイド × 日本語講師 × ポッドキャスター">
 <meta name="twitter:description" content="秋葉原アニメツアー・オタク向け日本語レッスン・10番組以上のポッドキャスト。">
 <meta name="twitter:image" content="https://animesensei.jp/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="アニメ先生ユウキ">
 <link rel="alternate" hreflang="ja" href="https://animesensei.jp/">
 <link rel="alternate" hreflang="en" href="https://animesensei.jp/en/">
 <link rel="alternate" hreflang="x-default" href="https://animesensei.jp/">
@@ -28,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/photos/hero.jpg" fetchpriority="high">
 
 <!-- Google Analytics 4 — 自前ホスティングなら無料。G-XXXXXXXXXX を実IDに置換し、下のコメントを外すだけ。
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -66,7 +72,7 @@
 <style>
   :root{
     --blue:#008dcb; --blue-d:#0077ae; --purple:#5001b9; --purple-d:#3f0193;
-    --ink:#222222; --muted:#8a8e97; --line:#edf0f4; --bg:#ffffff; --bg-soft:#f7f7f7;
+    --ink:#222222; --muted:#6b6f78; --line:#edf0f4; --bg:#ffffff; --bg-soft:#f7f7f7;
     --yellow:#fff649; --maxw:1080px; --radius:10px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -87,6 +93,13 @@
   .nav-links a:hover{color:var(--blue)}
   .nav-lang{font-size:13px;font-weight:700;border:1.5px solid var(--ink);padding:5px 12px;border-radius:4px}
   @media(max-width:760px){.nav-links{display:none}}
+  .nav-mobile{display:none;position:relative}
+  .nav-mobile summary{list-style:none;cursor:pointer;font-size:14px;font-weight:700;border:1.5px solid var(--ink);padding:5px 12px;border-radius:4px}
+  .nav-mobile summary::-webkit-details-marker{display:none}
+  .nav-mobile-menu{position:absolute;right:0;top:calc(100% + 8px);background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(20,20,40,.12);display:flex;flex-direction:column;min-width:180px;padding:8px;z-index:60}
+  .nav-mobile-menu a{padding:10px 12px;font-size:14px;font-weight:600;color:var(--ink);border-radius:6px}
+  .nav-mobile-menu a:hover{background:var(--bg-soft);color:var(--blue)}
+  @media(max-width:760px){.nav-mobile{display:block}}
 
   /* hero */
   .hero{position:relative;min-height:560px;display:flex;align-items:center;color:#fff;
@@ -167,7 +180,7 @@
   .field{margin-bottom:16px}
   .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
   .field input,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:8px;padding:13px 14px;font-size:15px;font-family:inherit;background:#fff;transition:.15s}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+  .field input:focus,.field textarea:focus{outline:2px solid var(--blue);outline-offset:2px;border-color:var(--blue)}
   .field textarea{min-height:130px;resize:vertical}
   .contact .btn-blue{width:100%;justify-content:center;border:0;font-size:16px}
   .contact .alt{text-align:center;margin-top:14px;font-size:13px;color:var(--muted)}
@@ -181,9 +194,12 @@
   footer{background:var(--ink);color:#cfd3da;padding:34px 0;font-size:13px}
   .foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
   footer a{color:#fff}
+  a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+  .skip-link{position:absolute;left:-9999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:100;font-weight:700}.skip-link:focus{left:0}
 </style>
 </head>
 <body id="top">
+<a href="#main" class="skip-link">本文へスキップ</a>
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -194,11 +210,20 @@
       <a href="#podcast">PODCAST</a>
       <a href="#contact">CONTACT</a>
     </nav>
+    <details class="nav-mobile">
+      <summary aria-label="メニューを開く">メニュー</summary>
+      <div class="nav-mobile-menu">
+        <a href="#profile">PROFILE</a>
+        <a href="#services">LESSON / TOUR</a>
+        <a href="#podcast">PODCAST</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </details>
     <a href="en/" class="nav-lang">EN</a>
   </div>
 </header>
 
-<main>
+<main id="main">
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-in">
@@ -227,7 +252,7 @@
   <section class="block">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-en">SELF <span class="ac">INTRO</span></div>
+        <h2 class="sec-en">SELF <span class="ac">INTRO</span></h2>
         <div class="sec-jp">自己紹介動画</div>
       </div>
       <!-- TODO(ユウキ): 自己紹介動画のYouTube URLを href に入れてください（埋め込みにも変更可） -->
@@ -244,27 +269,27 @@
   <section class="block soft" id="services">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-en">LESSON &amp; <span class="ac">TOUR</span></div>
+        <h2 class="sec-en">LESSON &amp; <span class="ac">TOUR</span></h2>
         <div class="sec-jp">レッスン・ツアー</div>
       </div>
       <div class="svc-grid">
         <div class="svc lesson">
-          <img class="ph" src="assets/img/photos/lesson.jpg" alt="オタク向け日本語レッスン" loading="lazy">
+          <img class="ph" src="assets/img/photos/lesson.jpg" alt="オタク向け日本語レッスン" loading="lazy" width="800" height="500">
           <div class="body">
             <div class="t-en">JAPANESE LESSON</div>
             <div class="t-jp">オタク向け日本語レッスン</div>
             <p>アニメ・マンガで「好き」から学ぶ日本語レッスン。文法や会話だけでなく、興味を引く内容がウリ。初心者〜上級・どんな年齢の方も大歓迎！自社サイト・各オンラインで累計2,091回以上の実績。</p>
           </div>
-          <a class="cta" href="https://animesenseijp.com/" target="_blank" rel="noopener">レッスンを予約する →</a>
+          <a class="cta" href="https://animesenseijp.com/" target="_blank" rel="noopener" aria-label="レッスンを予約する（新しいタブで開く）">レッスンを予約する →</a>
         </div>
         <div class="svc tour">
-          <img class="ph" src="assets/img/photos/tour.jpg" alt="秋葉原アニメツアー" loading="lazy">
+          <img class="ph" src="assets/img/photos/tour.jpg" alt="秋葉原アニメツアー" loading="lazy" width="800" height="500">
           <div class="body">
             <div class="t-en">AKIBA TOUR</div>
             <div class="t-jp">秋葉原アニメツアー</div>
             <p>東京・秋葉原で訪日外国人を1,500人以上ガイドしたオタクによるツアー。今まで知らなかったアキバのディープな魅力を、英語対応でご案内します。</p>
           </div>
-          <a class="cta" href="https://www.airbnb.jp/" target="_blank" rel="noopener">ツアーを予約する →</a>
+          <a class="cta" href="https://www.airbnb.jp/" target="_blank" rel="noopener" aria-label="ツアーを予約する（新しいタブで開く）">ツアーを予約する →</a>
         </div>
       </div>
     </div>
@@ -274,37 +299,37 @@
   <section class="block" id="podcast">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-en">PODCAST</div>
+        <h2 class="sec-en">PODCAST</h2>
         <div class="sec-jp">配信中のポッドキャスト</div>
         <p class="sec-sub">10番組以上・500話以上を配信中。旅・アキバ・珈琲・メンタル・地域まで幅広く展開中！（一部を掲載）</p>
       </div>
       <!-- PODCAST_CARDS_START (build/refresh_podcasts.py がこの区間を再生成) -->
       <div class="pod-grid">
-        <a class="pod" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener">
+        <a class="pod" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener" aria-label="ゼロからの体験ツアーガイドラジオ を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/taiken.jpg" alt="ゼロからの体験ツアーガイドラジオ" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">ゼロからの体験ツアーガイドラジオ</div><div class="pdesc">「ゼロからでも始められる」体験ツアーの始め方を発信。全128話。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://minpaku.yuukipodcast.com" target="_blank" rel="noopener">
+        <a class="pod" href="https://minpaku.yuukipodcast.com" target="_blank" rel="noopener" aria-label="ゼロからの民泊ガイドラジオ｜みんらじ を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/minpaku.jpg" alt="ゼロからの民泊ガイドラジオ｜みんらじ" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">ゼロからの民泊ガイドラジオ｜みんらじ</div><div class="pdesc">民泊の法律・物件・集客を基礎から解説。全139話。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://podcasters.spotify.com/pod/show/akibanow" target="_blank" rel="noopener">
+        <a class="pod" href="https://podcasters.spotify.com/pod/show/akibanow" target="_blank" rel="noopener" aria-label="アキバなう を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/akibanow.jpg" alt="アキバなう" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">アキバなう</div><div class="pdesc">ミスター秋葉原ササキチ×ユウキがアキバのイマを発信。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener">
+        <a class="pod" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener" aria-label="イレギュラーコーヒー を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/irregular.jpg" alt="イレギュラーコーヒー" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">イレギュラーコーヒー</div><div class="pdesc">珈琲好きのための番組。全101話。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://podcasters.spotify.com/pod/show/0iepkmbr02o" target="_blank" rel="noopener">
+        <a class="pod" href="https://podcasters.spotify.com/pod/show/0iepkmbr02o" target="_blank" rel="noopener" aria-label="メンタルよわよわラジオ を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/mental.jpg" alt="メンタルよわよわラジオ" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">メンタルよわよわラジオ</div><div class="pdesc">うつ・休職・復職を経験したITエンジニアの体験談。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://podcasters.spotify.com/pod/show/vibechannel" target="_blank" rel="noopener">
+        <a class="pod" href="https://podcasters.spotify.com/pod/show/vibechannel" target="_blank" rel="noopener" aria-label="偏愛Channel を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/henai.jpg" alt="偏愛Channel" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">偏愛Channel</div><div class="pdesc">あなたの「偏愛」をコンテンツにする推し活応援番組。</div><div class="plink">聴く →</div></div>
         </a>
-        <a class="pod" href="https://podcasters.spotify.com/pod/show/atsugitalk" target="_blank" rel="noopener">
+        <a class="pod" href="https://podcasters.spotify.com/pod/show/atsugitalk" target="_blank" rel="noopener" aria-label="厚木トーク｜厚木のしゃべり場 を新しいタブで開く">
           <img class="cover" src="assets/img/podcast/atsugi.jpg" alt="厚木トーク｜厚木のしゃべり場" loading="lazy" width="600" height="600">
           <div class="pbody"><div class="pname">厚木トーク｜厚木のしゃべり場</div><div class="pdesc">厚木生まれ5児の父ヤギ×ユウキのゆるトーク。全104話。</div><div class="plink">聴く →</div></div>
         </a>
@@ -317,7 +342,7 @@
   <section class="block soft" id="profile">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-en">PRO<span class="ac">FILE</span></div>
+        <h2 class="sec-en">PRO<span class="ac">FILE</span></h2>
         <div class="sec-jp">プロフィール</div>
         <p class="sec-sub">埼玉・坂戸市出身。住まいを固定しない多拠点生活（アドレスホッパー）をしながら活動しています。</p>
       </div>
@@ -347,7 +372,7 @@
   <section class="block" id="contact">
     <div class="wrap">
       <div class="sec-head">
-        <div class="sec-en">CON<span class="ac">TACT</span></div>
+        <h2 class="sec-en">CON<span class="ac">TACT</span></h2>
         <div class="sec-jp">お問い合わせ</div>
         <p class="sec-sub">レッスン・ツアー・取材・登壇・コラボのご相談はこちらから。</p>
       </div>
@@ -365,11 +390,11 @@
   <!-- LINKS -->
   <section class="block soft" id="links">
     <div class="wrap">
-      <div class="sec-head"><div class="sec-en">LINKS</div><div class="sec-jp">各種リンク</div></div>
+      <div class="sec-head"><h2 class="sec-en">LINKS</h2><div class="sec-jp">各種リンク</div></div>
       <div class="link-row">
-        <a class="lchip" href="https://animesenseijp.com/" target="_blank" rel="noopener">🌐 日本語レッスン公式</a>
-        <a class="lchip" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener">🎧 Spotify（番組）</a>
-        <a class="lchip" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener">📷 Instagram</a>
+        <a class="lchip" href="https://animesenseijp.com/" target="_blank" rel="noopener" aria-label="日本語レッスン公式（新しいタブで開く）">🌐 日本語レッスン公式</a>
+        <a class="lchip" href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener" aria-label="Spotify 番組一覧（新しいタブで開く）">🎧 Spotify（番組）</a>
+        <a class="lchip" href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener" aria-label="Instagram（新しいタブで開く）">📷 Instagram</a>
         <a class="lchip" href="assets/files/yuuki.vcf" download>📇 連絡先を保存</a>
         <!-- TODO(ユウキ): X / YouTube / note の実URLを追加 -->
         <a class="lchip" href="#" data-todo="X">𝕏 X（要URL）</a>

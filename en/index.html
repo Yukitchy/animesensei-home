@@ -13,9 +13,17 @@
 <meta property="og:description" content="Akihabara anime tours, otaku-focused Japanese lessons, and 10+ podcast shows.">
 <meta property="og:url" content="https://animesensei.jp/en/">
 <meta property="og:image" content="https://animesensei.jp/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AnimeSensei Yuuki">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AnimeSensei Yuuki｜Akihabara Anime Tour Guide × Japanese Teacher × Podcaster">
+<meta name="twitter:description" content="Akihabara anime tours, otaku-focused Japanese lessons, and 10+ podcast shows.">
 <meta name="twitter:image" content="https://animesensei.jp/assets/img/og.jpg">
+<meta name="twitter:image:alt" content="AnimeSensei Yuuki">
 <link rel="alternate" hreflang="ja" href="https://animesensei.jp/">
 <link rel="alternate" hreflang="en" href="https://animesensei.jp/en/">
 <link rel="alternate" hreflang="x-default" href="https://animesensei.jp/">
@@ -25,14 +33,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@600;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org","@type":"Person",
-  "name":"AnimeSensei Yuuki","alternateName":"アニメ先生ユウキ",
-  "url":"https://animesensei.jp/en/","image":"https://animesensei.jp/assets/img/og.jpg",
-  "jobTitle":["Akihabara Anime Tour Guide","Japanese Teacher","Podcaster"],
-  "description":"Akihabara anime tour guide who has guided 1,500+ international guests, runs otaku-focused Japanese lessons (2,091+ taught, top 1% rated) and 10+ podcast shows.",
-  "knowsLanguage":["en","ja"],
-  "address":{"@type":"PostalAddress","addressRegion":"Saitama","addressCountry":"JP"},
-  "sameAs":["https://animesenseijp.com/","https://podcasters.spotify.com/pod/show/akibanow"]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://animesensei.jp/#person",
+      "name": "AnimeSensei Yuuki",
+      "alternateName": "アニメ先生ユウキ",
+      "url": "https://animesensei.jp/en/",
+      "image": "https://animesensei.jp/assets/img/og.jpg",
+      "jobTitle": ["Akihabara Anime Tour Guide", "Japanese Teacher", "Podcaster", "Inbound Marketer"],
+      "description": "Akihabara anime tour guide who has guided 1,500+ international guests, runs otaku-focused Japanese lessons (2,091+ taught, top 1% rated) and 10+ podcast shows.",
+      "knowsAbout": ["Anime", "Manga", "Akihabara", "Japanese language teaching", "Podcasting", "Nomadic lifestyle", "Inbound tourism"],
+      "knowsLanguage": ["en", "ja"],
+      "address": {"@type": "PostalAddress", "addressRegion": "Saitama", "addressCountry": "JP"},
+      "sameAs": [
+        "https://animesenseijp.com/",
+        "https://podcasters.spotify.com/pod/show/taikenradio",
+        "https://podcasters.spotify.com/pod/show/akibanow",
+        "https://podcasters.spotify.com/pod/show/atsugitalk",
+        "https://www.instagram.com/irregularcoffee"
+      ]
+    },
+    {"@type": "WebSite", "@id": "https://animesensei.jp/en/#website", "url": "https://animesensei.jp/en/", "name": "AnimeSensei Yuuki", "inLanguage": "en", "about": {"@id": "https://animesensei.jp/#person"}}
+  ]
 }
 </script>
 <style>
@@ -74,14 +98,17 @@
   @media(max-width:760px){.work-grid{grid-template-columns:1fr}}
   footer{border-top:1px solid var(--line);padding:34px 0;color:var(--ink-soft);font-size:13px}
   .foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+  a:focus-visible,.btn:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .skip-link{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:10px 16px;z-index:100;font-weight:700}.skip-link:focus{left:0}
 </style>
 </head>
 <body id="top">
+<a href="#main" class="skip-link">Skip to content</a>
 <header class="nav"><div class="wrap nav-in">
   <a href="#top" class="brand"><span class="dot"></span>AnimeSensei Yuuki</a>
   <a href="../" class="nav-lang">日本語</a>
 </div></header>
-<main>
+<main id="main">
   <section class="hero"><div class="wrap">
     <span class="eyebrow">Akihabara × Anime × Nomad life</span>
     <h1>Turning what I love<br>into my work.</h1>
