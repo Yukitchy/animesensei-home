@@ -159,7 +159,7 @@
   .pod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   .pod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.18s}
   .pod:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(20,20,40,.1)}
-  .pod .cover{aspect-ratio:1/1;width:100%;object-fit:cover;background:#eee}
+  .pod .cover{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#f5f7f9}
   .pod .pbody{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1}
   .pod .pname{font-size:15px;font-weight:800;line-height:1.4}
   .pod .pdesc{font-size:12.5px;color:var(--muted);margin-top:6px;flex:1}
@@ -185,6 +185,23 @@
   .contact .btn-blue{width:100%;justify-content:center;border:0;font-size:16px}
   .contact .alt{text-align:center;margin-top:14px;font-size:13px;color:var(--muted)}
   .contact .alt a{color:var(--blue);font-weight:700}
+  /* social rail（右端固定SNSバー） */
+  .social-rail{position:fixed;right:15px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;align-items:center;gap:13px}
+  .social-rail .label{writing-mode:vertical-rl;font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.2em;font-size:11px;color:var(--muted);margin-bottom:6px}
+  .social-rail a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;color:#5b6168;transition:.15s}
+  .social-rail a:hover{color:var(--blue);transform:translateY(-2px)}
+  .social-rail svg{width:21px;height:21px}
+  @media(max-width:1040px){.social-rail{display:none}}
+  /* contact 2カラム（左フォーム／右写真） */
+  .contact-2col{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 34px rgba(20,20,40,.07);max-width:980px;margin:0 auto}
+  .cf-form{padding:34px 32px;background:#fff}
+  .cf-form .sec-head{margin-bottom:18px;text-align:left}
+  .cf-form .contact{max-width:none;margin:0}
+  .cf-photo{position:relative;min-height:430px;background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;padding:30px}
+  .cf-en{font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:.12em;font-size:42px;line-height:1}
+  .cf-jp{font-size:17px;font-weight:700;margin-top:12px}
+  .cf-done{margin-top:14px;padding:13px 15px;background:var(--blue);color:#fff;border-radius:8px;font-weight:700;text-align:center;font-size:14px}
+  @media(max-width:760px){.contact-2col{grid-template-columns:1fr}.cf-photo{min-height:210px;order:-1}}
 
   /* links */
   .link-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
@@ -200,6 +217,14 @@
 </head>
 <body id="top">
 <a href="#main" class="skip-link">本文へスキップ</a>
+
+<aside class="social-rail" aria-label="SNSリンク">
+  <span class="label">FOLLOW ME!</span>
+  <a href="https://www.instagram.com/irregularcoffee" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-.95.04-1.47.2-1.81.34-.46.18-.78.39-1.12.73-.34.34-.55.66-.73 1.12-.13.34-.3.86-.34 1.81-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.95.2 1.47.34 1.81.18.46.39.78.73 1.12.34.34.66.55 1.12.73.34.13.86.3 1.81.34 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.95-.04 1.47-.2 1.81-.34.46-.18.78-.39 1.12-.73.34-.34.55-.66.73-1.12.13-.34.3-.86.34-1.81.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.95-.2-1.47-.34-1.81a3.02 3.02 0 0 0-.73-1.12 3.02 3.02 0 0 0-1.12-.73c-.34-.13-.86-.3-1.81-.34-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm0 1.62a3.68 3.68 0 1 0 0 7.36 3.68 3.68 0 0 0 0-7.36zm5.5-.93a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0z"/></svg></a>
+  <a href="https://x.com/yukianimesensei" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64z"/></svg></a>
+  <a href="https://www.facebook.com/ichihara.yuki" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07z"/></svg></a>
+  <a href="https://podcasters.spotify.com/pod/show/taikenradio" target="_blank" rel="noopener" aria-label="Spotify"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.5 17.31a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.57-1.04 8.5-.59 11.66 1.34.35.22.46.68.25 1.03zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.23-1.98-8.15-2.56-11.97-1.4a.94.94 0 1 1-.55-1.8c4.37-1.32 9.79-.68 13.5 1.59.44.27.58.85.31 1.3zm.13-3.4C15.73 8.26 8.86 8.03 5.1 9.17a1.13 1.13 0 1 1-.66-2.16c4.33-1.32 11.9-1.06 16.07 1.41a1.13 1.13 0 0 1-1.16 1.94z"/></svg></a>
+</aside>
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -370,17 +395,30 @@
   <!-- CONTACT -->
   <section class="block" id="contact">
     <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-en">CON<span class="ac">TACT</span></h2>
-        <div class="sec-jp">お問い合わせ</div>
-        <p class="sec-sub">レッスン・ツアー・取材・登壇・コラボのご相談はこちらから。</p>
-      </div>
-      <!-- お問い合わせはGoogleフォームで受付（回答はスプレッドシートに自動集計）。フォームの編集は所有者のGoogleアカウントから。 -->
-      <div class="contact">
-        <a class="btn btn-blue" href="https://forms.gle/Ea7aasF5zmgrfWHv9" target="_blank" rel="noopener" aria-label="お問い合わせフォームを開く（Googleフォーム・新しいタブで開く）">お問い合わせフォームを開く →</a>
-        <div class="alt">フォームが開かない場合は <a href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで直接</a> どうぞ</div>
+      <!-- 左フォームはGoogleフォーム(forms.gle/Ea7aasF5zmgrfWHv9)を裏側に送信。回答はスプレッドシートに自動集計。見た目は自作でサイト内完結。 -->
+      <div class="contact-2col">
+        <div class="cf-form">
+          <div class="sec-head">
+            <h2 class="sec-en">CON<span class="ac">TACT</span></h2>
+            <div class="sec-jp">お問い合わせ</div>
+            <p class="sec-sub">レッスン・ツアー・取材・登壇・コラボのご相談はこちらから。</p>
+          </div>
+          <form class="contact" action="https://docs.google.com/forms/d/e/1FAIpQLSfr0s49jFoIzdrRj3cBBUh7cGpXWibnqk8YEKs80eaeP8xfEg/formResponse" method="POST" target="cf-sink" onsubmit="cfThanks()">
+            <div class="field"><label for="cf-n">お名前</label><input id="cf-n" name="entry.1971436455" type="text" placeholder="山田 太郎" required></div>
+            <div class="field"><label for="cf-e">メールアドレス</label><input id="cf-e" name="entry.1144500166" type="email" placeholder="you@example.com" required></div>
+            <div class="field"><label for="cf-m">お問い合わせ内容</label><textarea id="cf-m" name="entry.484302302" placeholder="ご相談内容をお書きください" required></textarea></div>
+            <button class="btn btn-blue" type="submit">送信</button>
+            <div class="alt">うまく送れない場合は <a href="mailto:icchan417@gmail.com?subject=お問い合わせ（アニメ先生ユウキ）">メールで直接</a> どうぞ</div>
+          </form>
+          <div class="cf-done" id="cf-done" hidden>送信ありがとうございます！内容を確認のうえ、ご記入のメールアドレス宛にご連絡します。</div>
+        </div>
+        <div class="cf-photo" style="background-image:linear-gradient(120deg,rgba(0,141,203,.34),rgba(80,1,185,.38)),url('assets/img/photos/profile.jpg')">
+          <div class="cf-en">INQUIRY</div>
+          <div class="cf-jp">お問い合わせはこちらから！</div>
+        </div>
       </div>
     </div>
+    <iframe name="cf-sink" title="送信先" style="display:none" aria-hidden="true"></iframe>
   </section>
 
   <!-- LINKS -->
@@ -406,5 +444,12 @@
   </div>
 </footer>
 
+<script>
+  function cfThanks(){
+    var done=document.getElementById('cf-done');
+    var form=document.querySelector('#contact form');
+    setTimeout(function(){ if(done) done.hidden=false; if(form) form.reset(); }, 250);
+  }
+</script>
 </body>
 </html>
