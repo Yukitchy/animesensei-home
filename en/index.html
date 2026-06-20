@@ -105,7 +105,12 @@
   .social-rail a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;color:#6b7178;transition:.15s}
   .social-rail a:hover{color:var(--accent);transform:translateY(-2px)}
   .social-rail svg{width:21px;height:21px}
-  @media(max-width:1040px){.social-rail{display:none}}
+  @media(max-width:1040px){
+    .social-rail{right:8px;gap:9px;padding:11px 7px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:999px;box-shadow:0 4px 18px rgba(20,20,40,.16)}
+    .social-rail .label{display:none}
+    .social-rail svg{width:19px;height:19px}
+    .social-rail a{width:30px;height:30px;color:#3a4046}
+  }
 </style>
 </head>
 <body id="top">
